@@ -7,8 +7,8 @@ function fn(){ // переделать эту функцию
     obj2.name = "Rola";
 
     obj1.lllll = () => {return {string: 'lalal1'}};
-    obj2.internalObj2 = () => {return {string: 'lalal2'}};
-    return obj1, obj2;
+    obj2.llllll2 = () => {return {string: 'lalal2'}};
+    return obj1.lllll();
 };
 console.log(fn());
 
