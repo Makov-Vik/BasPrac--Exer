@@ -1,3 +1,5 @@
+'use strict';
+
 //Identifiers
 let name = "Viktor";
 let date = 2002;
