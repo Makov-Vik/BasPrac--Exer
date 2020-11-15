@@ -1,3 +1,4 @@
+//Identifiers
 let name = "Viktor";
 let date = 2002;
 function greeting(name){
@@ -5,6 +6,7 @@ function greeting(name){
 };
 greeting("Viktor");
 
+//Cycles
 function range(start , end){ // All elements of array
      let array = [];
      for (start; start<=end; start++){
@@ -22,7 +24,7 @@ function rangeOdd(start, end){
 console.log({rangeOdd: array.filter(x => (x % 2)) });
 };
 
-
+//other way
 // function rangeOdd(start, end){
 //     let array = [];
 //     for (start; start<=end; start++){
