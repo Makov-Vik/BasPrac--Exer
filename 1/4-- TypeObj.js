@@ -1,14 +1,22 @@
-const different = ['Earth', 3 , true, 911 , false , 'Banana', 10000, true, "node", "Sun", 123]
-let obj = { number:0, string: 0, boolean:0  }
-for (i of different){
+'use strict'
+
+const arr = [true, 'hello', 5,  12, -200, 'fj', 58, 8, 48, 'lalala', false, false, 'word']
+
+let count = {
+};
+
+for ( let i of arr){
     if (typeof i === 'number'){
-        obj.number++;
-    }
+     if( count.hasOwnProperty('number'))  count.number++
+        else count.number = 1;
+    };
     if (typeof i === 'string'){
-        obj.string++;
-    }
+        if( count.hasOwnProperty('string'))  count.string++
+        else count.string = 1; 
+    };
     if (typeof i === 'boolean'){
-        obj.boolean++;
-    }
+        if( count.hasOwnProperty('boolean'))  count.boolean++
+        else count.boolean = 1;
+    };
 }
-console.warn({obj});
+console.log(count);
