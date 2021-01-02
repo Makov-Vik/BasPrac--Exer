@@ -5,11 +5,11 @@ function averege(a,b){
 };
 
 function square(a){
-    return (a*a);
+    return (a**2);
 };
 
 function cube(a){
-    return (a*a*a);
+    return (a**3);
 };
 
 function calculate(){
