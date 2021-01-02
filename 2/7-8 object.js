@@ -1,18 +1,24 @@
-'use strict';
+"use strict";
+//8 exercise
+const obj1 = { name: 'Vik',};
 
-function fn(){ // переделать эту функцию
-    const obj1 = { name: "Rapa"};
-    let obj2 = {name: "Gimp"};
-    obj1.name = "Sem";
-    obj2.name = "Rola";
+let obj2 = { name : 'Vik'};
 
-    obj1.lllll = () => {return {string: 'lalal1'}};
-    obj2.llllll2 = () => {return {string: 'lalal2'}};
-    return obj1.lllll();
-};
-console.log(fn());
+obj1.name = 'Makoviy';
+obj2.name = 'Makoviy';
+
+console.log ('object 1: ' ,obj1, '. object 2: ' , obj2);
+
+obj2['style'] = 'panamera';
+console.log('object 2 after : ' , obj2);
+
+//9 exercise
 
 function createUser(name, city){
-    console.dir({name:name, city: city});
-};
-createUser('Marcus Aurelius', 'Roma');
+    let object = {};
+    object['name'] = name;
+    object['city'] = city;
+    console.dir(object);
+}
+
+createUser('Viktor', 'Kiev');
