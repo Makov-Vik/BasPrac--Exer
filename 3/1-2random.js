@@ -1,10 +1,20 @@
-'use strict'
+"use strict";
 
-const random = (min,max) =>{
-    return Math.floor(Math.random()*(max-min) + min);
+function random(...arg) {
+    let a;
+    let b;
+    if (arg.length == 1){
+        a = 0;
+        b = Math.floor(arg[0]);
+    }
+    else {
+        a = Math.ceil(arg[0]);
+        b = Math.floor(arg[1]);
+    }
+    return Math.floor(Math.random()*(b - a +1)) + a;
 }
-
-console.log(random(21, 100));
+console.log(random(50, 100));
+console.log(random(100));
 
 console.log("");
 
