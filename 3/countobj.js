@@ -1,4 +1,7 @@
-let obj = {
+'use strict';
+
+const obj = {
+    super : 'lalal',
     m1: x => [x],
     m2: function (x, y) {
       return [x, y];
@@ -8,12 +11,9 @@ let obj = {
     },
   }
 
-function count(){
-    let s;
-    for (s in obj){
-        console.log(s, obj[s].length);
-        s++;
-        
-    }
-}
-console.log(count(obj));
+let count = {};
+for( let i in obj){
+    if( typeof obj[i] === 'function'){
+    count[i] = obj[i].length };
+};
+console.log(count);
