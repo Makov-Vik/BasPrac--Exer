@@ -18,18 +18,13 @@ console.log(random(100));
 
 console.log("");
 
-const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789абвгдеёжзийклмнопртсуфхцшщъыьэюя';
 function generateKey(length, characters){
-    let book = [];
-    for (let i = 0; i < length; i++){
-        let Key = random(0, characters.length);
-        book.push(characters[Key]);
+    let result = '';
+    for( let i = 0; i <  length; i++){
+        let number = Math.floor(Math.random() * (characters.length +1));
+        result += characters[number];
     }
-    
-    return book.join('');
+    console.log(result);
 }
-
-const key = generateKey(16, characters);
-
-console.log(key + "\n"); 
+generateKey(25,characters);
