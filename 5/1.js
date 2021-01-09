@@ -1,9 +1,6 @@
 'use strict'
 
-const seq = fn => otherfn => 
-    (typeof(otherfn) === 'number') ? fn(otherfn)
-    : seq(x => fn(otherfn(x)))
-;
-console.log(seq(x => x + 7)
-   (x => x * 2)(5));
+const seq = a => b =>
+ typeof b !== 'number' ? seq(x => a(b(x))) : console.log((a(b))) 
 
+seq(x => x + 7)(x => x * 2)(5)
