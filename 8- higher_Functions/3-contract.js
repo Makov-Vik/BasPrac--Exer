@@ -2,16 +2,16 @@
 
 const contract = (fn, ...types) => (...args) => {
   let type = typeof types[0];
-  types.map( (x) => {
-    if( typeof x != type){
-      type = false
+  types.map((x) => {
+    if (typeof x != type) {
+      type = false;
       return new TypeError();
     }
   });
-  if( type !== false){
-    return fn(...args)
+  if (type !== false) {
+    return fn(...args);
   }
-}
+};
 
 const add = (a, b) => a + b;
 const addNumbers = contract(add, Number, Number, Number);
