@@ -2,7 +2,7 @@
 
 const difference = (arr1, arr2) => {
   const newArray = []
-  arr1.map((x) => { if(arr2.includes(x) === false) newArray.push(x) } );
+  arr1.map((x) => { if(!arr2.includes(x)) newArray.push(x) } );
   return newArray; 
 };
 
