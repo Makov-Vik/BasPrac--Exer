@@ -1,0 +1,63 @@
+//Написать класс который имеет колекцию и метод .add(key, value). Note: добавлять объект в колекцию если задан хотябы или key или value.
+
+'use strict'
+
+class MYCLASS{
+  constructor(){
+    this.map = [];
+    this.count = 0
+  }
+  add(key, value){
+    if (!key && !value){
+      return console.log('There are no any parameters')
+    }
+    else {
+
+      this.map[this.count] = Object.fromEntries([[key, value]])
+      this.count++
+    }
+  }
+  howmany(){
+    return console.log(this.map)
+  }
+}
+
+const kollection = new MYCLASS()
+
+kollection.add('name', 'Marse')
+kollection.add('name', 'Viktor')
+kollection.add('name', 'Stas')
+kollection.add('body', 'strict')
+
+kollection.howmany()
+
+
+//========без повотора ключа =========
+
+// 'use strict'
+
+// class MYCLASS{
+//   constructor(){
+//     this.map = new Map()
+//   }
+//   add(key, value){
+//     if (!key && !value){
+//       return console.log('There are no any parameters')
+//     }
+//     else {
+//       this.map.set(key, value)
+//     }
+//   }
+//   howmany(){
+//     return console.log(this.map)
+//   }
+// }
+
+// const kollection = new MYCLASS()
+
+// kollection.add('name', 'Marse')
+// kollection.add('name', 'Viktor')
+// kollection.add('name', 'Stas')
+// kollection.add('body', 'strict')
+
+// kollection.howmany()
